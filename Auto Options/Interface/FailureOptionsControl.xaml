@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="DougKlassen.Revit.AutoOptions.Interface.FailureOptionsControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             Width="450" d:DesignHeight="500">
+    <ScrollViewer>
+        <Canvas>
+            <Label x:Name="LabelInternalName"
+                Content="{Binding Path=BuiltInFailuresInternalName}"
+                Canvas.Left="10" Canvas.Top="23" FontWeight="Bold" />
+            <Label
+                x:Name="LabelGuid"
+                Content="{Binding Path=GuidString}"
+                Canvas.Left="25" Canvas.Top="61" RenderTransformOrigin="0.6,2.9"/>
+            <TextBlock x:Name="TextBlockDescriptionText"
+                Text="{Binding Path=UserDescription}"
+                Canvas.Left="25" Canvas.Top="96" Height="126" Width="380" TextWrapping="Wrap"/>
+            <ComboBox x:Name="ComboBoxResolutions"
+                ItemsSource="{Binding Path=AvailableResolutions}"
+                SelectedIndex="{Binding Path=SelectedResIndex}"
+                DisplayMemberPath="FriendlyCaption"
+                SelectionChanged="ComboBoxResolutions_SelectionChanged"
+                Width="251" Canvas.Left="25" Canvas.Top="253" />
+            <TextBlock x:Name="ResolutionDescriptionText"
+                Text="{Binding Path=SelectedResolutionDescription}"
+                Canvas.Left="25" Canvas.Top="325" Height="126" Width="380" TextWrapping="Wrap"/>            
+        </Canvas>
+    </ScrollViewer>
+</UserControl>
