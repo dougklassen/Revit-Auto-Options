@@ -14,8 +14,7 @@ namespace DougKlassen.Revit.AutoOptions.StartUp
 {
     public static class FileLocations
     {
-        //public static String AddInDirectory;
-        public static readonly String AddInDirectory = @"C:\2014-BCRA-RVT\addins\AutoOptions\";
+        public static readonly String AddInDirectory = @"C:\ProgramData\AutoDesk\Revit\Addins\2015\AutoOptions\";
         public static String AssemblyFullPath
         {
             get
@@ -23,7 +22,6 @@ namespace DougKlassen.Revit.AutoOptions.StartUp
                 return AddInDirectory + "AutoOptions.dll";
             }
         }
-        public static readonly String ImperialTemplateDirectory = @"C:\ProgramData\Autodesk\RVT 2014\Family Templates\English_I\";
     }
 
     public class StartUpApp : IExternalApplication

@@ -116,7 +116,6 @@ namespace DougKlassen.Revit.AutoOptions.StartUp
                                     e.SetProcessingResult(action);
                                     fa.RollBackPendingTransaction();
                                     return;
-                                    break;
                                 case AutoOptionsResolutionType.HideWarning:
                                     //todo: check if actually is a warning?
                                     fa.DeleteWarning(fma);
