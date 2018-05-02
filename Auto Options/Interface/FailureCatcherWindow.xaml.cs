@@ -36,7 +36,7 @@ namespace DougKlassen.Revit.AutoOptions.Interface
             //Center the window on the main Revit window. uiApp is not guaranteed to be set
             if (uiApp != null)
             {
-                Autodesk.Revit.UI.Rectangle revitWindow = uiApp.MainWindowExtents;
+                var revitWindow = uiApp.MainWindowExtents;
                 Double centerWindowX = (revitWindow.Left + revitWindow.Right) / 2;
                 Double centerWindowY = (revitWindow.Top + revitWindow.Bottom) / 2;
                 Left = centerWindowX - Width / 2;

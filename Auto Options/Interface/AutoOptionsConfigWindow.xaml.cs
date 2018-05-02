@@ -53,7 +53,7 @@ namespace DougKlassen.Revit.AutoOptions.Interface
             ErrorOptionsPanel.DataContext = null;
 
             //Center the window on the main Revit window
-            Autodesk.Revit.UI.Rectangle revitWindow = cDParam.Application.MainWindowExtents;
+            var revitWindow = cDParam.Application.MainWindowExtents;
             Double centerWindowX = (revitWindow.Left + revitWindow.Right) / 2;
             Double centerWindowY = (revitWindow.Top + revitWindow.Bottom) / 2;
             Left = centerWindowX - Width / 2;
