@@ -14,7 +14,7 @@ namespace DougKlassen.Revit.AutoOptions.StartUp
 {
     public static class FileLocations
     {
-        public static readonly String AddInDirectory = @"C:\ProgramData\AutoDesk\Revit\Addins\2016\AutoOptions\";
+        public static readonly String AddInDirectory = @"C:\ProgramData\AutoDesk\Revit\Addins\2018\AutoOptions\";
         public static String AssemblyFullPath
         {
             get
