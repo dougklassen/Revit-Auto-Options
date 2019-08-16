@@ -55,8 +55,8 @@ namespace DougKlassen.Revit.AutoOptions.StartUp
             AutoOptionsConfigCommandPushButtonData.LargeImage =
                 new BitmapImage(new Uri("pack://application:,,,/resources/ao_large.jpg"));
 
-            RibbonPanel AutoOptions2014RibbonPanel = application.CreateRibbonPanel("Auto Options");
-            AutoOptions2014RibbonPanel.AddItem(AutoOptionsConfigCommandPushButtonData);
+            RibbonPanel AutoOptionsRibbonPanel = application.CreateRibbonPanel("Auto Options");
+            AutoOptionsRibbonPanel.AddItem(AutoOptionsConfigCommandPushButtonData);
 
             //assign the dispatcher object using the singleton instance. The singleton will be initialized at this time
             dispatcher = AutoOptionsDispatcher.Instance;
