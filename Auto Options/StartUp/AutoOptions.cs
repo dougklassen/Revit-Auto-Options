@@ -30,17 +30,11 @@ namespace DougKlassen.Revit.AutoOptions.StartUp
 
         Result IExternalApplication.OnStartup(UIControlledApplication application)
         {
-            ////FileLocations.AddInDirectory = application.ControlledApplication.AllUsersAddinsLocation + @"\AutoOptions\";
-            //String msg = String.Empty;
             ////todo: this sets the ResourceAssembly of Revit itself, so it will break other addins that try to set or access the ResourceAssembly
             if (System.Windows.Application.ResourceAssembly == null)
             {
-                //msg += "Resource Assembly is Null -- Setting\n";
                 System.Windows.Application.ResourceAssembly = Assembly.GetExecutingAssembly();
             }
-            //msg += "Resource Assembly: " + System.Windows.Application.ResourceAssembly.FullName + "\nExecuting Assembly: " + Assembly.GetExecutingAssembly().FullName + "\n";
-            //TaskDialog.Show("AutoOptions", msg);
-
 
             //setup the ui on the Ribbon
             PushButtonData AutoOptionsConfigCommandPushButtonData =
@@ -65,8 +59,6 @@ namespace DougKlassen.Revit.AutoOptions.StartUp
             dispatcher.SetOptions(settingsRepo.LoadAutoOptions());
             //register the event handler
             application.ControlledApplication.FailuresProcessing += dispatcher.AutoOptionsFailureHandler;
-
-
 
             return Result.Succeeded;
         }
