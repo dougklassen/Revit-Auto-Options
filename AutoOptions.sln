@@ -6,17 +6,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoOptions", "Auto Options
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
 		Rvt2018|Any CPU = Rvt2018|Any CPU
 		Rvt2019|Any CPU = Rvt2019|Any CPU
 		Rvt2020|Any CPU = Rvt2020|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{579F7194-30E6-4421-8588-E62AE7A55733}.Debug|Any CPU.ActiveCfg = Rvt2020|Any CPU
-		{579F7194-30E6-4421-8588-E62AE7A55733}.Debug|Any CPU.Build.0 = Rvt2020|Any CPU
-		{579F7194-30E6-4421-8588-E62AE7A55733}.Release|Any CPU.ActiveCfg = Rvt2020|Any CPU
-		{579F7194-30E6-4421-8588-E62AE7A55733}.Release|Any CPU.Build.0 = Rvt2020|Any CPU
 		{579F7194-30E6-4421-8588-E62AE7A55733}.Rvt2018|Any CPU.ActiveCfg = Rvt2018|Any CPU
 		{579F7194-30E6-4421-8588-E62AE7A55733}.Rvt2018|Any CPU.Build.0 = Rvt2018|Any CPU
 		{579F7194-30E6-4421-8588-E62AE7A55733}.Rvt2019|Any CPU.ActiveCfg = Rvt2019|Any CPU
