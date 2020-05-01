@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Media.Imaging;
 using System.Reflection;
 
-using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
 
 using DougKlassen.Revit.AutoOptions.ConfigRepo;
-using DougKlassen.Revit.AutoOptions.DomainModels;
 
 namespace DougKlassen.Revit.AutoOptions.StartUp
 {
@@ -36,6 +32,17 @@ namespace DougKlassen.Revit.AutoOptions.StartUp
                 System.Windows.Application.ResourceAssembly = Assembly.GetExecutingAssembly();
             }
 
+            //Set up tab and panel
+            String tabName = "DK";
+            try //an exception will be thrown if the tab already exists
+            {
+                application.CreateRibbonTab(tabName);
+            }
+            catch (Autodesk.Revit.Exceptions.ArgumentException e)
+            {
+                //ignore
+            }
+
             //setup the ui on the Ribbon
             PushButtonData AutoOptionsConfigCommandPushButtonData =
                 new PushButtonData(
@@ -49,7 +56,7 @@ namespace DougKlassen.Revit.AutoOptions.StartUp
             AutoOptionsConfigCommandPushButtonData.LargeImage =
                 new BitmapImage(new Uri("pack://application:,,,/resources/ao_large.jpg"));
 
-            RibbonPanel AutoOptionsRibbonPanel = application.CreateRibbonPanel("Auto Options");
+            RibbonPanel AutoOptionsRibbonPanel = application.CreateRibbonPanel(tabName, "Auto Options");
             AutoOptionsRibbonPanel.AddItem(AutoOptionsConfigCommandPushButtonData);
 
             //assign the dispatcher object using the singleton instance. The singleton will be initialized at this time
