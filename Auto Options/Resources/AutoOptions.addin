@@ -1,13 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <RevitAddIns>
-  <AddIn Type="Command">
-    <Assembly>".\AutoOptions\AutoOptions.dll"</Assembly>
-    <AddInId>60aad72e-fa56-4794-9d42-b21079fdd933</AddInId>
-    <FullClassName>DougKlassen.Revit.AutoOptions.Commands.AutoOptionsConfigCommand</FullClassName>
-    <Text>AutoOptions Config</Text>
-    <VendorId>TSRA</VendorId>
-    <VendorDescription>Doug Klassen</VendorDescription>
-  </AddIn>
   <AddIn Type="Application">
     <Name>AutoOptionsPanel</Name>
     <Assembly>.\AutoOptions\AutoOptions.dll</Assembly>
